@@ -1,3 +1,13 @@
+from os import system, name
+from time import sleep
+
+def clear():
+    # sleep(2)
+    if name == "nt":
+        system('cls')
+    else:
+        system('clear')
+
 def print_board(board, avail):
     print("\n")
     print(" Available Moves        TIC-TAC-TOE   \n")
@@ -36,6 +46,7 @@ def player_input(board, avail, player1, player2):
         print("Some problem has occured, please contact the developer")
     continue_playing = True
     while continue_playing:
+        clear()
         if current_player == player1:
             print("Player 1's Turn")
             next_player = player2
@@ -48,18 +59,22 @@ def player_input(board, avail, player1, player2):
         current_player = next_player
         if win_check(board, player1) and win_check(board, player2):
             continue_playing = False
+            clear()
             print_board(board, avail)
             print("\nIt's a tie")
         elif win_check(board, player1):
             continue_playing = False
+            clear()
             print_board(board, avail)
             print("\nPlayer 1 has won the game!")
         elif win_check(board, player2):
             continue_playing = False
+            clear()
             print_board(board, avail)
             print("\nPlayer 2 has won the game!")
         elif board_full(board):
             continue_playing = False
+            clear()
             print_board(board, avail)
             print("\nIt's a tie")
 
