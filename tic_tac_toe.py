@@ -83,6 +83,7 @@ def player_input(board, avail, player1, player2):
 init_board = ['#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 avail_board = ['#', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 # print_board(init_board)
+print("Welcome to Tic Tac Toe!\n")
 player1 = input("Player 1, please pick a marker 'X' or 'O': ")
 if player1=='X' or player1=='x':
     player1 = 'X'
