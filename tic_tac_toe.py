@@ -1,5 +1,6 @@
 def print_board(board, avail):
-    print(" Available Moves        TIC-TAC-TOE   ")
+    print("\n")
+    print(" Available Moves        TIC-TAC-TOE   \n")
     print(f"  {avail[7]}  |  {avail[8]}  |  {avail[9]}        {board[7]}  |  {board[8]}  |  {board[9]}  ")
     print("-----------------    -----------------")
     print(f"  {avail[4]}  |  {avail[5]}  |  {avail[6]}        {board[4]}  |  {board[5]}  |  {board[6]}  ")
@@ -42,7 +43,7 @@ def player_input(board, avail, player1, player2):
             print("Player 2's Turn")
             next_player = player1
         print_board(board, avail)
-        choice = int(input("Choose your next position: (1-9): "))
+        choice = int(input("\nChoose your next position: (1-9): "))
         place_marker(board, avail, current_player, choice)
         current_player = next_player
         if win_check(board, player1) and win_check(board, player2):
@@ -71,10 +72,10 @@ player1 = input("Player 1, please pick a marker 'X' or 'O': ")
 if player1=='X' or player1=='x':
     player1 = 'X'
     player2 = 'O'
-    print("Player 1 will start first")
+    print("\nPlayer 1 will start first")
     player_input(init_board, avail_board, player1, player2)
 elif player1=='O' or player1=='o':
     player2 = 'X'
     player1 = 'O'
-    print("Player 2 will play first")
+    print("\nPlayer 2 will play first")
     player_input(init_board, avail_board, player1, player2)
