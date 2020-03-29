@@ -10,12 +10,12 @@ def clear():
 
 def print_board(board, avail):
     print("\n")
-    print(" Available Moves        TIC-TAC-TOE   \n")
-    print(f"  {avail[7]}  |  {avail[8]}  |  {avail[9]}        {board[7]}  |  {board[8]}  |  {board[9]}  ")
-    print("-----------------    -----------------")
-    print(f"  {avail[4]}  |  {avail[5]}  |  {avail[6]}        {board[4]}  |  {board[5]}  |  {board[6]}  ")
-    print("-----------------    -----------------")
-    print(f"  {avail[1]}  |  {avail[2]}  |  {avail[3]}        {board[1]}  |  {board[2]}  |  {board[3]}  ")
+    print("   Available Moves        TIC-TAC-TOE   \n")
+    print(f"    {avail[7]}  |  {avail[8]}  |  {avail[9]}        {board[7]}  |  {board[8]}  |  {board[9]}  ")
+    print("  -----------------    -----------------")
+    print(f"    {avail[4]}  |  {avail[5]}  |  {avail[6]}        {board[4]}  |  {board[5]}  |  {board[6]}  ")
+    print("  -----------------    -----------------")
+    print(f"    {avail[1]}  |  {avail[2]}  |  {avail[3]}        {board[1]}  |  {board[2]}  |  {board[3]}  ")
 
 def place_marker(board, avail, marker, position):
     if board[position] == ' ':
@@ -61,22 +61,22 @@ def player_input(board, avail, player1, player2):
             continue_playing = False
             clear()
             print_board(board, avail)
-            print("\nIt's a tie")
+            print("\nIt's a tie\n")
         elif win_check(board, player1):
             continue_playing = False
             clear()
             print_board(board, avail)
-            print("\nPlayer 1 has won the game!")
+            print("\nPlayer 1 has won the game!\n")
         elif win_check(board, player2):
             continue_playing = False
             clear()
             print_board(board, avail)
-            print("\nPlayer 2 has won the game!")
+            print("\nPlayer 2 has won the game!\n")
         elif board_full(board):
             continue_playing = False
             clear()
             print_board(board, avail)
-            print("\nIt's a tie")
+            print("\nIt's a tie\n")
 
 # test_board = ['#','X','O','X','O','X','O','X','O','X']
 # print_board(test_board)
